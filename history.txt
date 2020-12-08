@@ -1,0 +1,21 @@
+# Sorry, I lost my bash history again. I will commit the commands that I remember I used.
+# This happens because I have linked my vs code bash to the git account to avoid having to
+# enter my password every time I want to do pull or push... and it seems it gets erased
+# after closing the project/vs code. I switched a couple times between projects as usually.
+# Sorry again.
+
+git clone {URL}
+git pull
+git add .
+git commit -m "{message}"
+git push
+
+I have created the branch using git GUI, but here is the command that I use if need to do it by hand:
+
+git checkout -b {branch-name}
+
+Also, about gulp:
+
+npm install (to get current node modules listed on package.json)
+gulp (to run gulp)
+npm i --save-dev gulp-concat (install gulp-concat)
