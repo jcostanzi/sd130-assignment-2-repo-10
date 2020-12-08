@@ -1,5 +1,6 @@
 const {src, dest, series, parallel} = require('gulp');
 const del = require('del');
+const concat = require('gulp-concat');
 
 function cleanTask() {
   return del('dist');
@@ -16,7 +17,8 @@ function scriptsTask() {
 }
 
 function stylesTask() {
-  return src('src/styles/**/*.css')
+  return src(['src/styles/**/!(override).css', 'src/styles/**/override.css'])
+    .pipe(concat('styles.css'))
     .pipe(dest('dist/css'))
 }
 
